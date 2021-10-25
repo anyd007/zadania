@@ -1,1 +1,3 @@
 # zadania
+
+Cwiczenia doszkalające
