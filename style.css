@@ -1,7 +1,11 @@
 *{
-    margin: 0;
+    margin: 10px;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Amatic SC', cursive;
+    font-size: 34px;
+    text-align: center;
+    
 }
 
 button{
@@ -9,11 +13,12 @@ button{
     display: flex;
     margin: 0 auto;
     cursor: pointer;
-    padding: 20px;
+    padding: 10px;
     font-size: 20px;
     border: 3px solid wheat;
     border-radius: 10px;
     transition: 0.3s;
+    margin-top: 25px;
 }
 button:hover {
     background-color: crimson;
@@ -21,6 +26,13 @@ button:hover {
 .result{
 color: brown;
 }
-th{
-    border: 3px solid black;
+.hide{
+    display: none;
+}
+.show {
+    display: flex;
+}
+button {
+    
+    display: inline
 }
