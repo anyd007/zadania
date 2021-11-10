@@ -1,6 +1,8 @@
 const show = document.createElement("h2");
 const show2 = document.createElement("h2");
 const btn = document.querySelector("button");
+const newUl = document.createElement("ul");
+document.body.append(newUl);
 document.body.append(show);
 document.body.append(show2);
 
@@ -51,21 +53,39 @@ class BetterOffer extends Oferta {
     return this.spalanie * cost;
   }
 }
-const newCar = new BetterOffer("Maluch", "126p", 2000, 9.5, 1990);
-show.textContent = `mój samochód to ${newCar.marka}, jest z roku ${newCar.rok} i spala ${newCar.spalanie} l/100km`;
-show2.textContent = `koszt przejechania 100km to  ${newCar.awarydge()} zł`;
-console.log(newCar);
+// const newCar = new BetterOffer("Maluch", "126p", 2000, 9.5, 1990);
+// show.textContent = `mój samochód to ${newCar.marka}, jest z roku ${newCar.rok} i spala ${newCar.spalanie} l/100km`;
+// show2.textContent = `koszt przejechania 100km to  ${newCar.awarydge()} zł`;
+// console.log(newCar);
+// console.log("-----------------------------");
 
 const Komis = {
   oferta1: new BetterOffer("volvo", "s60", 30303),
   oferta2: new BetterOffer("peugot", "607", 4000),
   oferta3: new BetterOffer("audi", "a30", 44444),
   oferta4: new BetterOffer("maluch", "126p", 1000),
+  oferta5: new BetterOffer("bmw", "m5", 20000),
 };
 
 for (const wypiszOferte in Komis) {
+  let newLi = document.createElement("li");
+  newUl.append(newLi);
   let btn = document.createElement("button");
-  document.body.append(btn);
-  console.log(Komis[wypiszOferte]);
+  newUl.append(btn);
   btn.textContent = Komis[wypiszOferte].marka;
+  newLi.textContent +=
+    `to jest samochód marki ${Komis[wypiszOferte].marka}` + "\n";
+  newLi.textContent += Komis[wypiszOferte].model + "\n";
+  newLi.textContent += `cena to ${Komis[wypiszOferte].cena} zł`;
 }
+
+// const x = document.createElement('ul');
+// document.body.append(x)
+// const test2 =()=>{
+//     for(let i=0; i<=5; i++){
+//         let y = document.createElement('li');
+//         x.append(y);
+//         y.textContent += i+1
+//     }
+// }
+// test2()
